@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-slate-100">
+
+
+<nav class="h-16 flex justify-between bg-white shadow ">
+ <div class="flex flex-1 justify-start flex-shrink-0 items-center">
+
+    
+
+ <a href="/"><img class="pl-5 block h-12 w-auto " src="/images/Trading image .png" alt="Your Company"></a>
+
+        </div>
+
+        <div class="flex justify-evenly flex-1">
+          <a href="/api/charts" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Charts</a> <a href="/watchlist/watchlists" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Watchlists</a>
+           <a href="/watchlist/create-watchlist" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Create Watchlist</a>
+        </div>
+
+          <div class="flex justify-end flex-1">
+          <a href="/users/login" class="inline-flex items-center border-b-2 border-transparent px-2 pt-1 text-md font-medium text-black  hover:border-blue-500 hover:text-gray-700">Sign in</a>
+
+
+          <a href="/users/signup" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Get Started</a>
+
+          <a href="/" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Logout</a>
+          
+         </div>
+</nav>
+
+
+
+<div class="px-4 py-10 sm:px-6 lg:px-8">
+  <div class="sm:flex sm:items-center">
+    <div class="sm:flex-auto">
+      <h1 class="text-3xl font-semibold text-gray-900">Exchange</h1>
+      <p class="mt-2 text-md text-gray-700">Select a cryptocurrency to display trading data</p>
+    </div>
+  </div>
+
+
+
+  <div class="px-4 sm:px-6 lg:px-8">
+  <div class="sm:flex sm:items-center">
+  </div>
+  <div class="mt-8 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-100">
+              <tr>
+                <th scope="col" class="whitespace-nowrap py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Ticker
+                </th>
+                <th scope="col" class="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900">Name</th>
+                <th scope="col" class="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900">Current Supply</th>
+                <th scope="col" class="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900">Market Cap</th>
+                <th scope="col" class="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900">Price</th>
+                 <th scope="col" class="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900">Change 24H</th>
+                <th scope="col" class="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900">Watchlists</th>
+              </tr>
+            </thead>
+
+
+
+
+            <tbody class="divide-y divide-gray-200 bg-white">
+
+        {{#each charts}}
+
+        <form action="/watchlist/add/{{id}}" method="post" >
+                <tr>
+                <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-6">{{symbol}}</td>
+                <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">{{name}}</td>
+                <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-900">{{supply}} <span class="font-bold">{{symbol}}</span></td>
+                <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">{{marketCapUsd}}$</td>
+                <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">{{priceUsd}}$</td>
+                <td  class="whitespace-nowrap px-2 py-2 text-sm"><span id="change">{{changePercent24Hr}}</span>%</td> 
+                <td class="relative whitespace-nowrap py-2  pr-4 text-right text-sm font-medium sm:pr-6">
+
+
+
+            <select name="watchlistId" class="inline mt-1 border border-black rounded-md mr-3 py-2 pl-3 pr-3 sm:text-sm" >
+              {{#each @root.watchlists}}
+                <option value="{{_id}}">
+                  {{name}}
+                </option>
+              {{/each}}
+            </select>
+
+
+
+
+                <button type="submit" class="inline-flex items-center rounded mr-3 border border-transparent bg-black px-2 py-2 text-sm font-sm text-white shadow-sm hover:bg-white hover:border-black hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to Watchlist</button>
+
+         </form>
+
+
+   
+
+                  
+
+              </tr>
+            {{/each}}
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+
+
+
+
+
+  
+<script src="/javascripts/dom.js"></script>
+    
+</body>
+</html>

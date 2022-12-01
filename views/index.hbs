@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      
+</head>
+<body class="bg-slate-100">
+
+    <nav class="h-16 flex justify-between bg-white shadow">
+
+
+ <div class="flex flex-1 justify-start flex-shrink-0 items-center">
+
+          <a href="/"><img class="pl-5 block h-12 w-auto " src="/images/Trading image .png" alt="Your Company"></a>
+
+        </div>
+
+        <div class="flex justify-evenly flex-1">
+          <a href="/api/charts" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Charts</a>
+          <a href="/watchlist/watchlists" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Watchlists</a>
+          <a href="/watchlist/create-watchlist" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Create Watchlist</a>
+        </div>
+
+          <div class="flex justify-end flex-1">
+          <a href="/users/login" class="inline-flex items-center border-b-2 border-transparent px-2 pt-1 text-md font-medium text-black  hover:border-blue-500 hover:text-gray-700">Sign in</a>
+
+
+          <a href="/users/signup" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Get Started</a>
+
+          <a href="/" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Logout</a>
+          
+         </div>
+</nav>
+ 
+
+   <div class="relative px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+        <div>
+          <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div>
+            <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">Data to bring your trading to the next level</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">Get acces to real time data for crypto analytics, and get ahead of the game!</p>
+          <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+            <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+              <defs>
+                <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#9089FC"></stop>
+                  <stop offset="1" stop-color="#FF80B5"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {{#if message}}
+
+          <div class="flex justify-center rounded-md bg-green-50 p-4 mt-5 mx-10">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div class="ml-3">
+      <h3 class="text-sm font-medium text-green-800">{{message}}</h3>
+      <div class="mt-2 text-sm text-green-700">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{/if}}
+
+
+
+</body>
+</html>

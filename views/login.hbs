@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-full ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-slate-50 h-full">
+
+
+    <nav class="h-16 flex justify-between bg-white shadow">
+
+
+        <div class="flex flex-1 justify-start">
+
+        <a href="/" class=" px-10 inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Home</a>
+
+      
+
+        </div>
+
+        <div class="flex justify-evenly flex-1">
+          <a href="/api/charts" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Charts</a>
+          <a href="/api/watchlist" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Watchlist</a>
+        </div>
+
+          <div class="flex justify-end flex-1">
+          <a href="/users/signup" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Get Started</a>
+
+           <a href="/" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Logout</a>
+
+         </div>
+</nav>
+
+
+    <div class="flex min-h-full">
+  <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm lg:w-96">
+      <div>
+        <img class="h-12 w-auto" src="/images/Trading image .png" alt="Your Company">
+        <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+
+      </div>
+
+      <div class="mt-8">
+        <div>
+
+          <div class="relative mt-6">
+            <div class="absolute  flex items-center" aria-hidden="true">
+              <div class="w-full border-t border-gray-300"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <form action="#" method="POST" class="space-y-6">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+              <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+              <div class="mt-1">
+                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+              </div>
+            </div>
+
+
+          {{#if message}}
+
+
+          <div class="rounded-md bg-red-50 p-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div class="ml-3">
+      <h3 class="text-sm font-medium text-red-800">{{message}}</h3>
+      <div class="mt-2 text-sm text-red-700">
+      </div>
+    </div>
+  </div>
+</div>
+          {{/if}}
+
+          
+
+            <div>
+              <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-blue-500 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-00 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
+
+<h2 class="mt-6 text-3xl text-center font-bold tracking-tight text-gray-900"> Get Ahead With Real Time Crypto Analytics</h2>
+
+    <img class="pt-10" src="/images/png-transparent-bitcoin-cash-cryptocurrency-ethereum-litecoin-bitcoin-text-logo-bitcoin.png" alt="">
+</div>
+    
+</body>
+</html>
+

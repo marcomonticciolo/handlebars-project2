@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-slate-100">
+
+
+  <nav class="h-16 flex justify-between bg-white shadow">
+    <div class="flex flex-1 justify-start flex-shrink-0 items-center">
+
+    
+
+        <a href="/"><img class="pl-5 block h-12 w-auto " src="/images/Trading image .png" alt="Your Company"></a>
+
+    </div>
+
+        <div class="flex justify-evenly flex-1">
+          <a href="/api/charts" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Charts</a>
+          <a href="/watchlist/watchlists" class="inline-flex items-center border-b-2 border-transparent  pt-1 text-md font-medium text-black hover:border-blue-500 hover:text-gray-700">Watchlists</a>
+        </div>
+
+          <div class="flex justify-end flex-1">
+          <a href="/users/login" class="inline-flex items-center border-b-2 border-transparent px-2 pt-1 text-md font-medium text-black  hover:border-blue-500 hover:text-gray-700">Sign in</a>
+
+
+          <a href="/users/signup" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Get Started</a>
+
+          <a href="/" class="pr-10 inline-flex items-center border-b-2 border-transparent px-3 pt-1 text-md font-medium text-black border:lg hover:border-blue-500 hover:text-gray-700">Logout</a>
+          
+         </div>
+</nav>
+
+
+
+
+
+  <form action="/watchlist/create-watchlist" method="post">
+
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<h1 class="text-4xl text-center font-semibold pt-10 ">Create a Watchlist</h1>
+
+<div class="relative">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300 mt-4"></div>
+  </div>
+  <div class="relative flex justify-center">
+  </div>
+</div>
+  <div class=" flex flex-row justify-evenly items-center overflow-hidden rounded-lg bg-white shadow mt-10 py-10  mx-auto max-w-4xl">
+
+    <div>
+  <label for="name" class="inline mb-3 text-lg font-medium text-gray-700">Watchlist Name:</label>
+  <div class="mt-1">
+    <input type="text" name="name" id="name" class="block rounded-md mt-2 border border-black py-3 px-8 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Name">
+  </div>
+</div>
+
+
+<div>
+  <label for="description" class="block mt-10 text-lg font-medium text-gray-700">Description:</label>
+  <div class="mt-1">
+    <textarea rows="4" name="description" id="description" class="flex flex-inline block w-full mt-2 rounded-md border  border-black py-4 px-6 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Description..."></textarea>
+  </div>
+</div>
+
+
+         <div>
+              <button type="submit" class="flex transition ease-in-out  bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-200 rounded-md border border-transparent bg-indigo-700 mt-8 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create Watchlist</button>
+            </div>
+
+
+
+
+
+
+
+   </form>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
